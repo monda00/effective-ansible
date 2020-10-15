@@ -1,0 +1,15 @@
+---
+- hosts: test_servers
+  tasks:
+    - name: create directory
+      file:
+        path: /home/vagrant/tmp
+        state: directory
+        owner: vagrant
+        mode: 0755
+    - name: copy file
+      copy:
+        src: /etc/hosts
+        dest: /home/vagrant/tmp/hosts
+        owner: vagrant
+        mode: 0644
