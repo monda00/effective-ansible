@@ -1,0 +1,3 @@
+---
+- include_tasks: roles/php-fpm/tasks/install.yml
+- include_tasks: roles/php-fpm/tasks/configure.yml
